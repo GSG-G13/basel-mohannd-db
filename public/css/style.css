@@ -301,6 +301,30 @@ header .menu .link.active::before {
   font-weight: bold;
 }
 
+/* User Page Not Found */
+body#user-not-found {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body#user-not-found section {
+  color: var(--text-color);
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+}
+body#user-not-found section h2 {
+  font-size: 40px;
+}
+body#user-not-found section a {
+  background-color: var(--primary-color);
+  padding: 5px 15px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
 /* Footer */
 footer {
   background-color: var(--light-bg-color);
