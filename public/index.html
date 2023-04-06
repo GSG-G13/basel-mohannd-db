@@ -11,6 +11,18 @@
 </head>
 
 <body>
+  <div class="pup-up">
+    <div class="form">
+      <i class="fa-solid fa-x close"></i>
+      <textarea
+        placeholder="What do you think of?"
+        required
+      ></textarea>
+      <input type="text" placeholder="image url" />
+      <button type="submit">add</button>
+    </div>
+  </div>
+
   <header>
     <div class="container">
       <h1 class="logo"><a href="/">FaceApp</a></h1>
@@ -35,64 +47,7 @@
   </section>
 
   <section class="posts">
-    <div class="container">
-      <div class="post content-box">
-        <div class="info">
-          <img class="small-img" src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg"
-            alt="user-pitcher" />
-          <div class="info-text">
-            <p class="user-name">mona rm</p>
-            <span class="post-time">35s <i class="fa-solid fa-earth-americas"></i></span>
-          </div>
-        </div>
-        <div class="post-text">
-          Hello guys today I learnd a bit about nuxt.js and it was perefect!!
-          recomended
-        </div>
-        <img class="post-img"
-          src="https://assets.lexascms.com/2d433d53-536b-49cc-9437-ba787964a4a7/588b84a6-3f58-48d1-a273-c04e75898dd6/nuxtjs-integration-cover.jpg?width=1344&quality=100"
-          alt="" />
-      </div>
-      <div class="post content-box">
-        <div class="info">
-          <img class="small-img"
-            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="user-pitcher" />
-          <div class="info-text">
-            <p class="user-name">Basel-sh</p>
-            <span class="post-time">35m <i class="fa-solid fa-earth-americas"></i></span>
-          </div>
-        </div>
-        <div class="post-text">
-          JavaScript is a dynamic programming language that's used for web
-          development, in web applications, for game development, and lots
-          more. It allows you to implement dynamic features on web pages that
-          cannot be done with only HTML and CSS.
-        </div>
-        <img class="post-img"
-          src="https://repository-images.githubusercontent.com/200666631/0060c080-d060-11ea-9698-98d89d68fc6d" alt="" />
-      </div>
-      <div class="post content-box">
-        <div class="info">
-          <img class="small-img"
-            src="https://images.pexels.com/photos/1933873/pexels-photo-1933873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="user-pitcher" />
-          <div class="info-text">
-            <p class="user-name">ahmed almasei</p>
-            <span class="post-time">2h <i class="fa-solid fa-earth-americas"></i></span>
-          </div>
-        </div>
-        <div class="post-text">
-          Structured Query Language (SQL) is a standardized programming
-          language that is used to manage relational databases and perform
-          various operations on the data in them. Initially created in the
-          1970s, SQL is regularly used not only by database administrators,
-          but also by developers writing data integration scripts and data
-          analysts looking to set up and run analytical queries. The term SQL
-          is pronounced ess-kew-ell or sequel.
-        </div>
-      </div>
-    </div>
+    <div class="container"></div>
   </section>
 
   <footer>
@@ -101,7 +56,9 @@
     </div>
   </footer>
 
+  <script src="js/fetchAllPosts.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/addPost.js"></script>
 </body>
 
 </html>

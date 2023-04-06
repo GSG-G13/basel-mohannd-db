@@ -1,6 +1,16 @@
 const { join } = require("path");
 
-const { getUser } = require("../database/queries");
+const {
+  getAllPostsQuery,
+  getUser,
+  addPostQuery,
+} = require("../database/queries");
+
+const getAllPosts = (req, res) => {
+  getAllPostsQuery()
+    .then((data) => res.json(data.rows))
+    .catch(() => res.status(500).send("server error"));
+};
 
 const getProfilePage = (req, res) => {
   const { username } = req.params;
@@ -21,6 +31,15 @@ const getUserData = (req, res) => {
     .catch(() => res.status(500).send("server error"));
 };
 
+const addPost = (req, res) => {
+  const post_text = req.body.post_text;
+  const post_img = req.body.post_img;
+
+  addPostQuery(post_text, post_img)
+    .then((data) => res.json(data.rows))
+    .catch(() => res.status(500).send("server error"));
+};
+
 const handle404 = (req, res) => {
   res.status(404).send("404 error");
 };
@@ -30,8 +49,10 @@ const handle500 = (err, req, res, next) => {
 };
 
 module.exports = {
+  getAllPosts,
   getProfilePage,
   getUserData,
+  addPost,
   handle404,
   handle500,
 };
